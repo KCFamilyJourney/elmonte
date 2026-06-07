@@ -32,7 +32,7 @@ function Mainframe(){
 
 
     return <>
-        <Header title={"Hollywood Sign"} reference={reference}/>
+        <Header title={"El Monte"} reference={reference}/>
         <Stack spacing={1} direction="row">
         {
             choices.map((item, index) => {
