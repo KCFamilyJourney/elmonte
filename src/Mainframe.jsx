@@ -12,6 +12,11 @@ function Mainframe(){
             file: "elmonte.csv",
             pos: {lat: 34.04599346191219,lng: -118.04647841407163}, //34.04599346191219, -118.04647841407163
             alltrails: ""
+        },
+        {   name: "To Long Beach Path",
+            file: "longbeach.csv",
+            pos: {lat: 33.76185312318516,lng: -118.19493661747939},
+            alltrails: ""
         }
     ];
     const [selectedOption, setSelectedOption] = useState(0); // Initial selected option
