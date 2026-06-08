@@ -42,20 +42,22 @@ const MyHikingMap = (props) => {
   ]);
 
   useEffect(() => {
-  console.log(`csv: ${props.csv} mark: ${JSON.stringify(props.mark.lat)}`);
-  if(props.csv) {
-  fetch(props.csv)
-    .then(response => response.text())
-    .then(csvText => {
-      Papa.parse(csvText, {
-        header: true,
-        complete: (result) => {
-          //console.log(result.data)
-          setTrailData(result.data);
-        },
-      });
-    });
-  }
+    console.log(`csv: ${props.csv} mark: ${JSON.stringify(props.mark.lat)}`);
+    if(props.csv) {
+      fetch(props.csv)
+        .then(response => response.text())
+        .then(csvText => {
+          Papa.parse(csvText, {
+            header: true,
+            skipEmptyLines: true,
+            transform: (value) => value.trim(), 
+            complete: (result) => {
+              //console.log(result.data)
+              setTrailData(result.data);
+            },
+          });
+        });
+    }
 }, [props.csv]);
 
 useEffect(() => {

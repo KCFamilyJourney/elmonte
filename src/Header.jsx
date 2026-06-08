@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css"
-import sign from "./assets/Hollywood_Sign.jpeg"
+import sign from "./assets/elmonte.png";
 
 function Header(props){
 
